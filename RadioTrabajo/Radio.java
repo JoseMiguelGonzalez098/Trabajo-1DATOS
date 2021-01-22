@@ -1,13 +1,18 @@
 /******************************************************************
-radio.java
-Autor: Carol Arevalo y Jose Miguel Gonzalez
-Última modificación: xxx
+@author Carol Arevalo y Jose Miguel Gonzalez
+ultima modificacion:21/01/21
 
-main (controlador)
+radio
 ******************************************************************/
 import java.util.Scanner;
 
-class Radio implements Interface{
+
+/**
+*Implementa interface
+*funcionamiento de un radio
+*/
+
+public class Radio implements Interface{
 
     public boolean encendido =true; 
     public boolean amFm = false;
@@ -16,18 +21,44 @@ class Radio implements Interface{
     public double avanzar = 94.9;
     public String[] botones= {null, null, null, null, null, null, null, null, null, null, null, null};
    
-   //Constructor
-   public radio(){
+   /** 
+    * constructor 
+    * 
+    */
+   public Radio(){
    }
+    
+   //METODOS--------------------------------------------------------------------------------------
 
-   //METODOS
+
+   /** 
+     * @return boolean
+     * @param none
+     * Cambia el estado de "encendido" de la Radio
+     */
+
    public boolean encenderApagar(){
-    encendido = false;
+    //encendido = false;
+
+    if(encendido == true){
+
+        encendido = false;
+
+    } else if(encendido == false){
+
+        encendido = true;
+
+    }
     return encendido; 
    }
     
 
 /***************************************************************************************/
+/** 
+     * @return boolean
+     * @param none
+     * Cambia la frecuencia en la que se encuentra la Radio, con un true o un false, y cambia el numero de la emisora en la que se encuentra
+     */
 public boolean amFm(){
 
     if(amFm == false){
@@ -39,8 +70,13 @@ public boolean amFm(){
     }
     return amFm; 
 }
-
 /***************************************************************************************/
+/** 
+     * @return String
+     * @param int
+     * Remplaza el valor de una lista en la que se encuntran las frecuencias guardadas
+     */
+    
 public String guardar(int btn){
 
     String estacion = avanzar + "";
@@ -59,6 +95,11 @@ public String guardar(int btn){
 }
 
 /***************************************************************************************/
+/** 
+     * @return String
+     * @param int
+     * Permite al usuario cambiar a una de las radios que tenga guardadas, cambiando la frencencia y la radio.
+     */
 public String seleccionar(int btn){
 
     String seleccionar = "";
@@ -86,6 +127,12 @@ public String seleccionar(int btn){
 }
 
 /***************************************************************************************/
+
+/** 
+ * @return double
+ * @param none
+ * Avanza entre etaciones 
+ */
 public double avanzar(){
 
     double respuesta = avanzar;
@@ -117,9 +164,6 @@ public double avanzar(){
     return avanzar;
 
 }
-
-
-
 
     
 }

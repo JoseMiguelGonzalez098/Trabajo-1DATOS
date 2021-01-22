@@ -1,10 +1,14 @@
 /******************************************************************
-interfa.java
-Autor: Carol Arevalo y Jose Miguel Gonzalez
-Última modificación: xxx
+@author Carol Arevalo y Jose Miguel Gonzalez
+ultima modificacion: 21/01/21
 
 interfaz
 ******************************************************************/
+
+/**
+*Nos da los parametros para poder usarlos de forma correcta el la clase de "Radio" con sus parametros y retornos.
+*Interfaz que sera implementa en Radio- contrato
+*/
 
 public interface Interface{
     public boolean encenderApagar();

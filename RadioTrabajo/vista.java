@@ -1,19 +1,26 @@
 /******************************************************************
-vista.java
-Autor: Carol Arevalo y Jose Miguel Gonzalez
-Última modificación: xxx
+@author Carol Arevalo y Jose Miguel Gonzalez
+ultima modificacion: 21/01/21
 
 vista
 ******************************************************************/
 
 import java.util.Scanner;
-
+/** 
+ * Nos sirve para interactuar con el usuario.
+ */
 public class vista {
     Scanner scan = new Scanner(System.in);
       
     public vista(){
     }
 
+    
+    /** 
+     * @return int
+     * @param none
+     * Informacion del menu y solicita informacion
+     */
     public int menu(){
 
     System.out.println("\n\n-----------.M.E.N.U.-----------");
@@ -39,6 +46,12 @@ public class vista {
 
     }
 
+    
+    /** 
+     * @return int
+     * @param none
+     * @Informacion oara escoger entre am y fm
+     */
     public int AmFm(){
 
     System.out.println("\n\nElija una opcion:");
@@ -60,29 +73,24 @@ public class vista {
 
     }
 
+    
+    /** 
+     * @param x
+     * @
+     * @Para imprimir lo que nos sea util a lo largo del main
+     */
     public void imprimir(String x){
+        /** 
+        * 
+        */
         System.out.println(x);
     }
-
-    public int siono(){
-
-        System.out.println("Esta seguro que desea apagar la radio \n1: si / 2: no");
-
-        while (true){ 
-            try { 
-            int op = scan.nextInt();
-            if (op>0 & op <3){
-                return op;
-            } else {
-                throw new StringIndexOutOfBoundsException();
-            }
-            } catch (StringIndexOutOfBoundsException e) {
-            System.out.println("\nERROR: La opción singresada no es válida, ingrese un número en el rango de opciones");
-            }
-        }
-
-    }
-
+    
+    /** 
+     * @return int
+     * @param none
+     * @Se pide un numero del 1 al 12 para que el usuario escoga en donde guardar su emisora, ademas de asegurarse que no igrese valores no validos
+     */
     public int gboton(){
 
         System.out.println("Escoga un numero del 1 al 12 para guardar la emisora (tenga en cuenta se sobre escribira si habia una antes)");
@@ -101,6 +109,12 @@ public class vista {
         }
 
     }
+    
+    /** 
+     * @return int
+     * @param none
+     * @Solicita al usuario un boton del 1 al 12 para ser usado en el main, ademas de asegurarse que no ingrese valores erroneos.
+     */
     public int eboton(){
 
         System.out.println("Escoga un boton");
