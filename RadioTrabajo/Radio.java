@@ -6,6 +6,8 @@ radio
 ******************************************************************/
 import java.util.Scanner;
 
+import jdk.jfr.Timestamp;
+
 
 /**
 *Implementa interface
@@ -133,6 +135,7 @@ public String seleccionar(int btn){
  * @param none
  * Avanza entre etaciones 
  */
+
 public double avanzar(){
 
     double respuesta = avanzar;
